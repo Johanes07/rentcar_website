@@ -1,0 +1,22 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-0889f0ba.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/css/frontend.css": {
+    "file": "assets/frontend-3e092252.css",
+    "isEntry": true,
+    "src": "resources/css/frontend.css"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-24dce01b.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  },
+  "resources/js/frontend.js": {
+    "file": "assets/frontend-2972f7cf.js",
+    "isEntry": true,
+    "src": "resources/js/frontend.js"
+  }
+}
