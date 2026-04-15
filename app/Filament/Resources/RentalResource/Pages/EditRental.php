@@ -16,4 +16,19 @@ class EditRental extends EditRecord
             Actions\DeleteAction::make(),
         ];
     }
+
+
+     protected function mutateFormDataBeforeFill(array $data): array
+{
+    $data['foto_ktp'] = $this->record->foto_ktp ?? [];
+    return $data;
+}
+
+protected function mutateFormDataBeforeSave(array $data): array
+{
+    if (empty($data['foto_ktp'])) {
+        $data['foto_ktp'] = $this->record->foto_ktp ?? [];
+    }
+    return $data;
+}
 }

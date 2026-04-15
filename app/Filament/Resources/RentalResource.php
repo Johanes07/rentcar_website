@@ -24,7 +24,7 @@ class RentalResource extends Resource
 {
     protected static ?string $model = Rental::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-collection';
+    protected static ?string $navigationIcon = 'heroicon-o-document-text';
 
    public static function form(Form $form): Form
 {
@@ -114,15 +114,17 @@ class RentalResource extends Resource
                 ->label('Foto KTP')
                 ->disk('public')
                 ->directory('ktp')
-                ->image()
-                ->maxSize(2048),
+                ->imagePreviewHeight('150')
+                ->maxSize(2048)
+                ->getUploadedFileUrlUsing(fn ($file) => asset('storage/' . $file)),
 
             Forms\Components\FileUpload::make('bukti_transfer')
                 ->label('Bukti Transfer')
                 ->disk('public')
                 ->directory('bukti_transfer')
-                ->image()
-                ->maxSize(2048),
+                ->imagePreviewHeight('150')
+                ->maxSize(2048)
+                ->getUploadedFileUrlUsing(fn ($file) => asset('storage/' . $file)),
 
             Forms\Components\Textarea::make('catatan')
                 ->label('Catatan')
